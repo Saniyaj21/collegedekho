@@ -5,8 +5,7 @@ import {
 	getCollegeDetailsSlice,
 	selectCollege,
 } from "../redux/slices/collegeSlice";
-import '../styles/pages/CollegeDetailsPage.css'
-
+import "../styles/pages/CollegeDetailsPage.css";
 
 const CollegeDetailsPage = () => {
 	const { id } = useParams();
@@ -17,7 +16,7 @@ const CollegeDetailsPage = () => {
 	}, [id]);
 
 	return (
-		<div className="details-page">
+		<div className='details-page'>
 			<div className='head-college-details'>
 				<div>
 					<img
@@ -26,8 +25,8 @@ const CollegeDetailsPage = () => {
 					/>
 				</div>
 				<div>
-					<h1 className="font-p">{selectedCollege?.collegeName}</h1>
-					<p className="font-p">{selectedCollege?.address}</p>
+					<h1 className='font-p'>{selectedCollege?.collegeName}</h1>
+					<p className='font-p'>{selectedCollege?.address}</p>
 				</div>
 			</div>
 			<div className='course-details'>
@@ -37,8 +36,8 @@ const CollegeDetailsPage = () => {
 						<th>Course Fess</th>
 						<th>Sit Capacity</th>
 					</tr>
-					{selectedCollege?.courses?.map((course) => (
-						<tr>
+					{selectedCollege?.courses?.map((course, index) => (
+						<tr key={index}>
 							<td>{course.courseName}</td>
 							<td>Rs. {course.courseFees}</td>
 							<td>{course.sit}</td>
