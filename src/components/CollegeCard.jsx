@@ -18,7 +18,7 @@ const CollegeCard = ({ college, handleDelete }) => {
 			</Link>
 
 			<button
-				onClick={() => handleDelete(college._id)}
+				onClick={() => handleDelete(college?._id)}
 				className='font-p flex-center'
 			>
 				<MdDelete />
