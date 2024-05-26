@@ -1,0 +1,40 @@
+.user-card-main {
+	display: flex;
+	border: 1px solid var(--blue);
+	border-radius: 5px;
+	padding: 5px 10px;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px 0px;
+    max-width: 400px;
+	width: 100%;
+}
+.user-card-main button {
+	padding: 2px 15px;
+	border: 1px solid var(--blue);
+	border-radius: 15px;
+	background: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.user-card-main button:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+.user-card-main div img {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+.user-card-main div {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+.user-card-main div div {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	align-items: start;
+}

@@ -1,0 +1,74 @@
+header {
+	background: var(--black);
+	display: flex;
+	height: 60px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0px 5%;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	max-width: 1400px;
+}
+nav div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+nav div a {
+	text-decoration: none;
+	color: var(--white);
+	font-size: 20px;
+}
+
+nav div div button {
+	padding: 2px 15px;
+	background: transparent;
+	border: 1px solid var(--tomato);
+	font-size: 18px;
+	border-radius: 5px;
+	color: var(--white);
+	cursor: pointer;
+	gap: 5px;
+	transition: all 0.3s;
+}
+nav div div button:hover {
+	background: var(--white);
+	border: 1px solid var(--white);
+	border-radius: 9px;
+	color: var(--black);
+}
+
+nav div div a img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.login-link {
+	gap: 5px;
+	padding: 2px 15px;
+	background: transparent;
+	border: 1px solid var(--tomato);
+	font-size: 18px;
+	border-radius: 5px;
+	color: var(--white);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+	.search-text{
+		display: none;
+	}
+}

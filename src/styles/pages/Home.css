@@ -1,0 +1,67 @@
+
+.college-container h1 {
+	color: var(--blue);
+	font-size: 26px;
+    padding: 20px 0px;
+}
+
+.tagline-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 150px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+	height: 80vh;
+	width: 100%;
+	/* background:var(--gray); */
+}
+
+.tagline {
+	font-size: 2.5em;
+	font-weight: bold;
+	margin: 0;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.sub-tagline {
+	font-size: 1.5em;
+	margin: 10px 0 0 0;
+	color: var(--blue);
+}
+
+.cta {
+	padding: 8px 25px;
+	text-decoration: none;
+	background: var(--tomato);
+	border: 1px solid var(--tomato);
+	font-size: 18px;
+	border-radius: 5px;
+	color: var(--white);
+	cursor: pointer;
+	gap: 5px;
+	transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+	.tagline {
+		font-size: 2em;
+	}
+
+	.sub-tagline {
+		font-size: 1.2em;
+	}
+}
+
+@media (max-width: 480px) {
+	.tagline {
+		font-size: 1.5em;
+	}
+
+	.sub-tagline {
+		font-size: 1em;
+	}
+}

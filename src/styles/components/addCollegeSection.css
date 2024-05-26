@@ -1,0 +1,82 @@
+.add-college-main {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+.add-college-main div {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 400px;
+	width: 100%;
+}
+.add-college-main div div input {
+	background: blue;
+	height: 35px;
+	border: 1px solid var(--blue);
+	background: transparent;
+	border-radius: 5px;
+    outline: none;
+	padding: 8px 10px;
+    font-size: 16px;
+    font-family: "Sriracha", cursive;
+	font-weight: 400;
+}
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.logo-div input {
+    display: none;
+}
+.logo-div img {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+.logo-div label {
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.course-div div{
+    padding: 20px 5px;
+    border-radius: 5px;
+}
+.course-div div input{
+    outline: none !important;
+    border: none !important;
+    border-radius: 0px !important;
+   border-bottom: 2px solid var(--blue) !important;
+}
+.course-div button{
+    background: var(--tomato);
+    color: var(--white);
+    font-size: 14px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-college-btn{
+    background: var(--blue);
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 18px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

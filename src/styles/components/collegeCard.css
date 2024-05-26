@@ -1,0 +1,45 @@
+.college-card-main {
+	display: flex;
+	border: 1px solid var(--blue);
+	border-radius: 5px;
+	padding: 5px 10px;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px 0px;
+    max-width: 400px;
+	width: 100%;
+}
+.college-card-main button {
+	padding: 2px 15px;
+	border-radius: 15px;
+    border: none;
+	background: transparent;
+    transition: all 0.3s;
+    font-size: 20px;
+    cursor: pointer;
+}
+.college-card-main button:hover {
+    color: var(--red);
+}
+.college-card-main a img {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+.college-card-main a {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+.college-card-main a div {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+}
+.college-card-main a div span{
+	display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
