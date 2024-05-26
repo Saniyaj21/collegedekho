@@ -29,7 +29,10 @@ const Home = () => {
 						{allColleges &&
 							allColleges?.map((college) => {
 								return (
-									<div className='college-card-main gb-shadow'>
+									<div
+										key={college?._id}
+										className='college-card-main gb-shadow'
+									>
 										<Link to={`/college/${college?._id}`}>
 											<img src={college?.logo?.url} alt='' />
 											<div>

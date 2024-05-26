@@ -4,10 +4,13 @@ import "../styles/components/collegeCard.css";
 import { MdDelete } from "react-icons/md";
 
 const CollegeCard = ({ college, handleDelete }) => {
-	console.log(college);
+	const clickHandler = (id) => {
+		handleDelete(id);
+	};
+
 	return (
 		<div className='college-card-main gb-shadow'>
-			<Link Link to={`/college/${college?._id}`}>
+			<Link to={`/college/${college?._id}`}>
 				<img src={college?.logo?.url} alt='' />
 				<div>
 					<span className='font-p'>{college?.collegeName}</span>
@@ -18,7 +21,7 @@ const CollegeCard = ({ college, handleDelete }) => {
 			</Link>
 
 			<button
-				onClick={() => handleDelete(college?._id)}
+				onClick={() => clickHandler(college?._id)}
 				className='font-p flex-center'
 			>
 				<MdDelete />

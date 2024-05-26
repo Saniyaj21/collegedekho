@@ -1,8 +1,10 @@
-
+.college-container {
+	padding: 20px 5%;
+}
 .college-container h1 {
 	color: var(--blue);
 	font-size: 26px;
-    padding: 20px 0px;
+	padding: 20px 0px;
 }
 
 .tagline-container {

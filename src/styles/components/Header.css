@@ -71,4 +71,8 @@ nav div div a img {
 	.search-text{
 		display: none;
 	}
+	nav div {
+	
+		gap: 8px;
+	}
 }

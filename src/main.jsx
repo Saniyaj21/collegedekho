@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 	</GoogleOAuthProvider>
 );
 // development use this
-// export const base_url = "http://localhost:8080";
+export const base_url = "http://localhost:8080";
 
 // final deploy use this
-export const base_url = "https://college-dekho-server.vercel.app";
+// export const base_url = "https://college-dekho-server.vercel.app";

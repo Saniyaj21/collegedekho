@@ -9,18 +9,26 @@ import {
 } from "../redux/slices/collegeSlice";
 import TextOverFlowHandle from "../helpers/TextOverFlowHandle";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const SearchPage = () => {
 	const [keyword, setKeyword] = useState("");
 
 	const dispatch = useDispatch();
 	const { searchResult } = useSelector(selectCollege);
-	console.log("test", searchResult);
 
 	useEffect(() => {}, [searchResult?.length]);
 	useEffect(() => {
 		dispatch(clearSearch());
 	}, []);
+
+	const handleSearch = () => {
+		if (keyword === "") {
+			toast.error("Enter course name");
+			return;
+		}
+		dispatch(searchCollegeByCourseSlice({ keyword }));
+	};
 
 	return (
 		<div className='search-page '>
@@ -30,12 +38,10 @@ const SearchPage = () => {
 					onChange={(e) => setKeyword(e.target.value)}
 					value={keyword}
 					className='font-p'
+					placeholder='Enter course name'
 					type='text'
 				/>
-				<button
-					onClick={() => dispatch(searchCollegeByCourseSlice({ keyword }))}
-					className='flex-center'
-				>
+				<button onClick={() => handleSearch()} className='flex-center'>
 					<span className='font-p '>Search</span>
 					<FaSearch />
 				</button>
@@ -48,20 +54,17 @@ const SearchPage = () => {
 				{searchResult &&
 					searchResult?.map((college) => {
 						return (
-							<div className='college-card-main gb-shadow'>
-										<Link to={`/college/${college?._id}`}>
-											<img src={college?.logo?.url} alt='' />
-											<div>
-												<span className='font-p'>{college?.collegeName}</span>
-												<span>
-													<TextOverFlowHandle
-														text={college?.address}
-														size={60}
-													/>
-												</span>
-											</div>
-										</Link>
+							<div key={college._id} className='college-card-main gb-shadow'>
+								<Link to={`/college/${college?._id}`}>
+									<img src={college?.logo?.url} alt='' />
+									<div>
+										<span className='font-p'>{college?.collegeName}</span>
+										<span>
+											<TextOverFlowHandle text={college?.address} size={60} />
+										</span>
 									</div>
+								</Link>
+							</div>
 						);
 					})}
 			</div>

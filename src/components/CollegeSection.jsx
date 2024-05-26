@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CollegeCard from "./CollegeCard";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -10,25 +10,22 @@ import {
 import "../styles/components/collegeSection.css";
 import toast from "react-hot-toast";
 
-
-
 const CollegeSection = () => {
 	const dispatch = useDispatch();
-	const { allColleges , status} = useSelector(selectCollege);
-
+	const { allColleges, status } = useSelector(selectCollege);
 
 	useEffect(() => {
 		dispatch(getAllCollegesSlice());
-		dispatch(clearStatus())
-		if(status.deleteCollegeStatus === 'success'){
-			toast.success("College deleted")
+		dispatch(clearStatus());
+		if (status.deleteCollegeStatus === "success") {
+			toast.success("College deleted");
 		}
 	}, [allColleges?.length]);
 
+	const handleDelete = (id) => {
+		toast.success("Deleting..");
 
-	const handleDelete = (collegeid) => {
-		toast.success("Deleting..")
-		dispatch(deleteCollegeSlice(collegeid));
+		dispatch(deleteCollegeSlice(id));
 	};
 
 	return (
